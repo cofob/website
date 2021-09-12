@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+	
+<head>
+<meta charset="utf-8">
+<title>cofob</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="style.css" rel="stylesheet" type="text/css">
+<link rel="preload" as="image" href="https://cofob.ru/page/cofob.png">
+<!--<meta name="description" content="">-->
+<meta name="keywords" content="cofob, 2buldzha2t">
+<script src="wow.min.js"></script>
+<script>new WOW().init();</script>
+<script src="window.js"></script>		
+</head>
+
+<body id="boddy">
+	<div translate="no" class="notranslate" id="title">cofob</div>
+	<a translate="no" class="project notranslate" href="#prjct">Projects<div class="arrow"></div></a>
+	<!--<div id="fot_ico-menu"><div class="menu-ico"></div></div>-->
+	<div id="fillthespace"></div>
+	
+	<!--Карта проектов-->
+	<div id="zav_block" class="wow-2">
+		Projects map:<br>
+		<div id="zav"></div>Completed
+		<div id="nezav"></div>Unfinished
+		<div id="zabr"></div>Abandoned
+	</div>
+	<!--Карта проектов end-->
+	
+	<!-- Список проектов-->
+	<div id="c">
+		<a name="prjct"></a>
+		<div id="cr" class="wow">
+			<div id="list_projects" class="zav"><!--clss zav - звершен, nezav - не завершен, zabr - заброшен-->
+				<img src="page/42.webp"/><!--картинка -->
+				<div class="name">
+					<a href="https://2buldzha2t.ru/" target="_blank">Minecraft server</a><!--название проекта-->
+					<div id="description">The multiplayer Minecraft server, was created on April 19, 2021. At the moment it is a fan server of the youtuber"BuldZhat"
+						<a href="https://2buldzha2t.ru/2021/05/13/%d0%be-%d1%81%d0%b5%d1%80%d0%b2%d0%b5%d1%80%d0%b5/" class="new-tab" target="_blank">Go to the website</a>
+					</div><!-- Описании проекта с ссылками для дэсктопной версии -->
+					<div id="description-media_sreen">
+						The multiplayer Minecraft server.<a class="new-tab" href="https://2buldzha2t.ru/2021/05/13/%d0%be-%d1%81%d0%b5%d1%80%d0%b2%d0%b5%d1%80%d0%b5/" target="_blank">Go to the site</a><!-- описании с ссылками для мобильной версии-->
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div id="cr" class="wow">
+			<div id="list_projects" class="zav">
+				<img src="page/ygg.webp"/>
+				<div class="name">
+					<a href="#yggdrasil" onClick="openwindow()">yggdrasil node</a><!--Ссылка на якорь сплвающей менюшки-->
+					<div id="description">Check more info:
+						<a href="#yggdrasil node" onClick="openwindow()">Open</a>
+					</div>
+					<div id="description-media_sreen">
+						Check more info:<a href="#yggdrasil" onClick="openwindow()">Open</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div id="cr" class="wow">
+			<div id="list_projects" class="zav">
+				<img src="page/internet.webp"/>
+				<div class="name">
+					<a href="#matrix" onClick="openwindow()">matrix server</a>
+					<div id="description">matrix.3301.su / ALFIS matrix.ygg
+					</div>
+					<div id="description-media_sreen">
+						matrix.3301.su / ALFIS matrix.ygg
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="cr" class="wow">
+			<div id="list_projects" class="zav">
+				<img src="page/internet.webp"/>
+				<div class="name">
+					<a href="#git" onClick="openwindow()">Git server</a>
+					<div id="description">git.3301.su / ALFIS gitea.ygg
+					</div>
+					<div id="description-media_sreen">
+						git.3301.su / ALFIS gitea.ygg
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="cr" class="wow">
+			<div id="list_projects" class="nezav">
+				<img src="page/internet.webp"/>
+				<div class="name">
+					<a href="#ca" onClick="openwindow()">Ca server</a>
+					<div id="description">ca.cofob.ru / ALFIS ca.ygg
+					</div>
+					<div id="description-media_sreen">
+						ca.cofob.ru / ALFIS ca.ygg
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="cr" class="wow">
+			<div id="list_projects" class="nezav">
+				<img src="page/internet.webp"/>
+				<div class="name">
+					<a href="#bitwarden" onClick="openwindow()">Bitwarden server</a>
+					<div id="description">bw.3301.su / ALFIS bw.srv
+					</div>
+					<div id="description-media_sreen">
+						bw.3301.su / ALFIS bw.srv
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="cr" class="wow">
+			<div id="list_projects" class="zav">
+				<img src="page/internet.webp"/>
+				<div class="name">
+					<a href="#ALFIS_DNS" onClick="openwindow()">ALFIS DNS server</a>
+					<div id="description"><a href="#ALFIS_DNS" onClick="openwindow()">View</a>
+					</div>
+					<div id="description-media_sreen">
+						<div id="description-media_sreen"><a href="#ALFIS_DNS" onClick="openwindow()">View</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+	</div>
+	<!-- Список проектов end-->
+	
+	
+	<!-- открывающее меню подробностей-->
+	<div id="menu_par">
+		<div id="menu_details">
+			<a href="#prjct" id="close_window" onClick="closewindow()"><div id="ico_close"></div></a><!-- Закрыть-->
+			
+			
+			<div id="menu_content">
+				<div id="fott_menu">
+					<a name="yggdrasil"></a><!--Якорь-->
+					<div id="menu_title">yggdrasil node</div>
+					<div id="details">German200 Mb<br>
+						tcp://ygg.cofob.ru:80<br>
+						tls://ygg.cofob.ru:443<br>
+						<br>
+						Russian 500Mb<br>
+						tcp://ygg-ru.cofob.ru:18000<br>
+						tls://ygg-ru.cofob.ru:18001<br>
+						<br>
+						</a>Russian 200Mb<br>
+						tcp://ygg-ru2.cofob.ru:80<br>
+						tls://ygg-ru2.cofob.ru:443<br>
+					</div>
+				</div>
+			</div>
+		
+		
+		<div id="fillthespace"></div><!-- <-Растянул простраство, чтоб инфа не толпилась-->
+		
+		<div id="menu_content">
+			<div id="fott_menu">
+				<a name="matrix"></a>
+				<div id="menu_title">Matrix server:</div>
+				<div id="details">matrix.3301.su <br> ALFIS matrix.ygg
+				</div>
+			</div>
+		</div>
+	
+		<div id="fillthespace"></div>
+		
+		<div id="menu_content">
+			<div id="fott_menu">
+				<a name="git"></a>
+				<div id="menu_title">Git server:</div>
+				<div id="details">matgit.3301.su <br> ALFIS gitea.ygg
+				</div>
+			</div>
+		</div>
+		
+		<div id="fillthespace"></div>
+		
+		<div id="menu_content">
+			<div id="fott_menu">
+				<a name="ca"></a>
+				<div id="menu_title">Ca server:</div>
+				<div id="details">ca.cofob.ru <br> ALFIS ca.ygg
+				</div>
+			</div>
+		</div>
+		
+		<div id="fillthespace"></div>
+		
+		<div id="menu_content">
+			<div id="fott_menu">
+				<a name="bitwarden"></a>
+				<div id="menu_title">Bitwarden server:</div>
+				<div id="details">bw.3301.su <br> ALFIS bw.srv
+				</div>
+			</div>
+		</div>
+		
+		<div id="fillthespace"></div>
+		
+		<div id="menu_content">
+			<div id="fott_menu">
+				<a name="ALFIS_DNS"></a>
+				<div id="menu_title">ALFIS_DNS:</div>
+				<div id="details">325:5a4:d1c9:db96::53
+				</div>
+			</div>
+		</div>
+		
+		<div id="fillthespace"></div>
+		
+		</div>
+	</div>
+	
+	<!-- открывающее меню подробностей end-->
+
+	
+	<!--Ссылки на соц. сети и т.д.-->
+	<div id="social">
+		<div id="social_ico"><a href="https://github.com/cofob" title="GitHub"><img src="page/GitHub_logo-cofob.webp"/></a></div>
+		<div id="social_ico"><a href="https://www.reddit.com/user/cofob" title="Reddit"><img src="page/Reddit_logo-cofob.webp" /></a></div>
+		<div id="social_ico"><a href="https://steamcommunity.com/id/cofob/" title="Steam"><img src="page/steam_logo-cofob.webp" /></a></div></div>
+	</div>
+	<!--Ссылки на соц. сети и т.д. end-->
+	
+</body>
+</html>
