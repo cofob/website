@@ -1,0 +1,344 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@font-face{
+	font-family:"Hattori Hanzo";
+	src: url("../other/font.otf");	
+}
+::selection{
+	background-color: #67267F;
+	color:#fff;
+}
+html {
+	scroll-behavior: smooth;
+}
+html, body {
+	scrollbar-color: #2B1729 #110910;
+	scrollbar-width:thin;
+}
+body, #title{
+	padding:0;
+}
+body{
+	animation: bg-anim 300ms 1;
+	margin: 0;
+	min-width: 800px;
+	max-width: 100%;
+	background-color: #170d16;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+}
+#title, .projectScroll{
+	display:inline-block;
+	left:50%;
+}
+#title::before,#title::after{
+	opacity: 0;
+	font-style:italic bold;
+	animation:  opacit4 300ms 1;
+	margin-left: 10px;
+	position: absolute;
+	color: blue;
+	content: "cofob";
+}
+#title::after{
+	margin-left: -338px;
+	color: red;
+}
+#title::before{
+	color: blue;
+}
+#title{
+	text-shadow: -2px 0px 0 #FF0004,2px 0px 0 #2200FF,-2px 0px 10px rgba(255,20,20,0.4),2px 0px 10px rgba(20,20,255,0.4);
+	font-family:"Hattori Hanzo";
+	color:#fff;
+	user-select: none; 
+	position:absolute;
+	animation: title-anim_emergence 350ms 1,title-anim_static 1.25s infinite;
+	font-style:italic;
+	font-size:10em;
+	width:338px;
+	height:auto;
+	top:50%;
+	margin:-156px 0 0 -169px;
+}
+.projectScroll{
+    user-select: none;
+    animation: project-anim_emergence 1s 1;
+    position: absolute;
+    margin-left: -27px;
+    bottom: 30px;
+    width: 30px;
+    text-decoration: none;
+}
+#arrow::before {
+	opacity: 0.6;
+	content: "";
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	border-top:solid 2px #fff;
+	border-right:solid 2px #fff;
+	margin: 7px 0px -0px -4px;
+}
+#arrow{
+	opacity: 0.7;
+	animation: arrow 2s 3 cubic-bezier(0, 1, 0.99,-0.07);
+	display: inline-block;
+	transform: translateY(-5px) rotate(135deg);
+	width: 30px;
+	height: 30px;
+	border-top:solid 2px #fff;
+	border-right:solid 2px #fff;
+	margin: 10px 0px 0px 10px;
+}
+.place{
+	display: inline-block;
+}
+.section{
+	text-align: center;
+	margin-bottom: 10px;
+	font-family: 'Ubuntu', sans-serif;
+	padding: 0;
+	color:#cbb6ed;
+	font-size: 22px;
+}
+.section::before{
+	margin: 15px 0px 0px -352px;
+	position: absolute;
+	display: inline-block;
+	content: "";
+	max-width: 352px;
+	width: 100%;
+	height: 1px;
+	border-top: dashed 1px rgba(203,182,237,0.59);
+}
+.section::after{
+	margin: 15px 0px 0px 0px;
+	position: absolute;
+	display: inline-block;
+	content: "";
+	max-width: 352px;
+	width: 100%;
+	height: 1px;
+	border-top: dashed 1px rgba(203,182,237,0.59);
+}
+#fillthespace{
+	height: 100vh;
+	width: 0;
+	display: inline-block;
+}
+#list_of_projects-main{
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+	display: block;
+	color:#B7B7B7;
+	text-align: center;
+	
+}
+#list_projects{
+	display: inline-block;
+	max-width: 850px;
+	min-width: 240px;
+	text-align:left;
+}
+.project{
+	margin: 10px 0;
+}
+.project::after{
+	margin: 30px 0 0 0;
+	content:"";
+	display: block;
+	width: 100%;
+	height: 1px;
+	background-color: #3B203A;
+}
+.project_name{
+	margin: 0px 0 10px 0px;
+	display: inline-block;
+	font-weight: 600;
+	font-size: 20px;
+}
+.project_name a{
+	cursor: pointer;
+	text-decoration: none;
+	color:#BB92FF;
+}
+.project_name a:hover{
+	text-decoration: underline;
+}
+.project_status{
+	display: inline-block;
+}
+.project_status.complete{
+	width: 8px;
+	height: 8px;
+	border-radius: 100%;
+	background-color: #8C8C8C;
+}
+.project_status.unfinished{
+	width: 8px;
+	height: 8px;
+	border-radius: 100%;
+	background-color: #0969da;
+}
+.project_status.abandoned{
+	width: 8px;
+	height: 8px;
+	border-radius: 100%;
+	background-color: #880000;
+}
+.project_description{
+	margin: 0px 0 10px 0px;
+	font-size: 16px;
+}
+.project_description a{
+	color:#B7B7B7;
+}
+.project_links{
+	margin-left: -0px;
+}
+.project_links a{
+	font-size: 16px;
+	text-decoration: underline;
+	cursor: pointer;
+	color:#B7B7B7;
+}
+.project_links a::before{
+}
+.project_links a::before{
+	color:#fff;
+	display: inline-block;
+	text-decoration: none;
+	margin: 0 3px;
+	content: "/";
+}
+.project_links a[target~="_blank"]::after{
+	content: "";
+	opacity: 0.5;
+	margin: 0 0 4px 2px;
+	text-decoration: none;
+	display:inline-block;
+	width: 10px;
+	height: 10px;
+	background-image: url("../img/new-tab_ico-white.webp");
+}
+.project_links a:first-of-type::before{
+	content: none;
+}
+#social{
+	box-shadow: inset 0 0 10px 10px rgba(0,0,0,0.2);
+	background-attachment: fixed;
+	background-image: url("../img/bofoc.webp");
+	background-size: cover;
+	text-align: center;
+	margin: 40px 0 0 0;
+	padding: 20px 0;
+	background-color: #0C060B;
+}
+.social_ico{
+	padding: 0;
+	margin: 0 15px 0 15px;
+	opacity: .5;
+	display: inline-block;
+}
+.social_ico:hover{
+	opacity: 1;
+}
+#zav_centr{
+	text-align: center;
+	min-width: 800px;
+	display:block;
+	width: 100%;
+}
+#Projects_Map{
+	width: auto;
+    margin-left: -0px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 0.98em;
+    color: rgba(200,182,198,0.6);
+}
+.complete_status, .unfinished_status, .abandoned_status{
+	border-radius: 100%;
+	margin: 15px 2px 0 0px;
+	display:inline-block;
+	width: 8px;
+	height: 8px;
+}
+.complete_status{
+	background-color: #8C8C8C;
+}
+.unfinished_status{
+	background-color: #0969da;
+}
+.abandoned_status{
+	background-color: #880000;
+}
+#description-media_sreen{
+	display: none;
+}
+#description-media_sreen a{
+	display: none;
+}
+.window_main{
+	z-index: 1;
+	visibility: hidden;
+	width: 100%;
+	height:100%;
+	background-color: rgba(0,0,0,0.60);
+	position:fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.windows{
+	box-shadow: 0 -10px 20px 0 rgba(0,0,0,0.6);
+	text-align: center;
+	width: 100%;
+	background-color: #170d16;
+	color:#fff;
+	display: inline-block;
+	position: fixed;
+	bottom: 0;
+}
+.windows_title{
+	padding: 15px 0;
+	font-weight: 600;
+	font-size: 22px;
+	background-color: #0F090F;
+	color:#BB92FF;
+	text-align: center;
+}
+.windows_links{
+	max-width: 100%;
+	min-width: 240px;
+	padding: 10px 0 20px 0;
+	font-weight: 600;
+	font-size: 18px;
+	color:#BB92FF;
+	text-align: center;
+}
+.windows_links a{
+	display: inline-block;
+	border: solid 2px #170d16;
+	border-radius:8px;
+	box-shadow: 5px 5px 0 0 rgba(0,0,0,0.46);
+	margin: 0 10px;
+	color:#fff;
+	text-decoration: none;
+	padding: 5px;
+	background-color: rgba(0,0,0,0.25);
+}
+.windows_links a{
+	background-color: rgba(0,0,0,0.15);
+}
+.windows_description{
+	display: inline-block;
+	max-width: 850px;
+	min-width: 240px;
+	padding: 20px 0px;
+	font-size: 16px;
+}
+.show{
+	animation: winShow 500ms 1;
+}

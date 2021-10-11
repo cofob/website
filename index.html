@@ -6,158 +6,95 @@
 <title>cofob</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="style.css" rel="stylesheet" type="text/css">
-<link rel="preload" as="image" href="https://cofob.ru/page/cofob.png">
+<link href="style/css/style.css" rel="stylesheet" type="text/css">
+<link href="style/css/style_media.css" rel="stylesheet" type="text/css">
+<link href="style/css/style_keyframes.css" rel="stylesheet" type="text/css">
+<link rel="preload" href="style/img/preload.jpg" as="image">
 <!--<meta name="description" content="">-->
 <meta name="keywords" content="cofob, 2buldzha2t">
-<script src="wow.min.js"></script>
-<script>new WOW().init();</script>
-<script src="window.js"></script>		
 </head>
-
-<body id="boddy">
+<body>
 	<div translate="no" class="notranslate" id="title">cofob</div>
-	<a translate="no" class="project notranslate" href="#prjct">Projects<div class="arrow"></div></a>
+	<a translate="no" class="projectScroll notranslate" href="#projects" title="scroll down"><div id="arrow"></div></a>
 	<!--<div id="fot_ico-menu"><div class="menu-ico"></div></div>-->
 	<div id="fillthespace"></div>
-	
-	<!--Карта проектов-->
-	<div id="zav_block" class="wow-2">
-		Projects map:<br>
-		<div id="zav"></div>Completed
-		<div id="nezav"></div>Unfinished
-		<div id="zabr"></div>Abandoned
-	</div>
-	<!--Карта проектов end-->
-	
 	<!-- Список проектов-->
-	<div id="c">
-		<a name="prjct"></a>
-		<div id="cr" class="wow">
-			<div id="list_projects" class="zav"><!--clss zav - звершен, nezav - не завершен, zabr - заброшен-->
-				<img src="page/42.webp"/><!--картинка -->
-				<div class="name">
-					<a href="https://2buldzha2t.ru/" target="_blank">Minecraft server</a><!--название проекта-->
-					<div id="description">Minecraft server.
-						<a href="https://2buldzha2t.ru/2021/05/13/%d0%be-%d1%81%d0%b5%d1%80%d0%b2%d0%b5%d1%80%d0%b5/" class="new-tab" target="_blank">Go to the website</a>
-					</div><!-- Описании проекта с ссылками для дэсктопной версии -->
-					<div id="description-media_sreen">
-						Minecraft server.<a class="new-tab" href="https://2buldzha2t.ru/2021/05/13/%d0%be-%d1%81%d0%b5%d1%80%d0%b2%d0%b5%d1%80%d0%b5/" target="_blank">Go to the site</a><!-- описании с ссылками для мобильной версии-->
-					</div>
-				</div>
+	<div class="section">Мои проекты:</div>
+	<div id="list_of_projects-main">
+		<div id="list_projects">
+			<a name="projects"></a>
+			<div class="project"><!--Minecraft server -->
+				<div class="project_name"><a onclick="widnowMinecraftserver()" class="project_name">Маенкрафт сервер</a></div>
+				<div class="project_status complete"></div><!--complete-завершен, unfinished-незавершен, abandoned-заброшен -->
+				<div class="project_description">Многопользовательский сервер Minecraft, c возможностью мониторинга статуса работы и своей вики. Cозданный 19 апреля в 2021 году. На данный момент является оффициальным сервером ютубера «БулдЖать».</div>
+                <div class="project_links"><a href="https://2buldzha2t.ru" target="_blank">Сайт</a><a href="https://wiki.2buldzha2t.ru/doku.php?id=start" target="_blank">Вики</a><a href="https://status.2buldzha2t.ru/" target="_blank">Мониторинг</a><a href="https://discord.2buldzha2t.ru/" target="_blank">Дискорд</a></div>
+				<!--в "project_links" ссылки для десктопа, в мобилках их нет.-->
 			</div>
-		</div>
-		
-		<div id="cr" class="wow">
-			<div id="list_projects" class="zav">
-				<img src="page/ygg.webp"/>
-				<div class="name">
-					<a href="#yggdrasil" onClick="openwindow()">Yggdrasil nodes</a><!--Ссылка на якорь сплвающей менюшки-->
-					<div id="description">Check more info:
-						<a href="#yggdrasil node" onClick="openwindow()">Open</a>
-					</div>
-					<div id="description-media_sreen">
-						Check more info:<a href="#yggdrasil node" onClick="openwindow()">Open</a>
-					</div>
-				</div>
+			<div class="project"><!--Yggdrasil nodes-->
+				<div class="project_name"><a onclick="windowYggdrasil()" class="project_name">Yggdrasil nodes</a></div>
+				<div class="project_status complete"></div>
+				<div class="project_description">Сетевой протокол и его реализация, с помощью которого можно создать mesh-сеть, которая будет работать в оверлейном режиме, позволяя создать приватную сеть поверх Интернета.</div>
+                <div class="project_links"><a onclick="windowYggdrasil()">Подробнее</a><a href="https://github.com/cofob/public-peers" target="_blank">GitHub</a></div>
 			</div>
-		</div>
-		
-		<div id="cr" class="wow">
-			<div id="list_projects" class="zav">
-				<img src="page/internet.webp"/>
-				<div class="name">
-					<a href="https://git.3301.su">Git server</a>
-					<div id="description">
-						CLEARNET <a href="https://git.3301.su/">git.3301.su</a> / 
-						ALFIS <a href="http://gitea.ygg/">gitea.ygg</a> / 
-						EmerDNS <a href="http://gitea.emc/">gitea.emc</a>
-					</div>
-					<div id="description-media_sreen">
-						<a href="https://git.3301.su/">git.3301.su</a> / ALFIS <a href="http://gitea.ygg/">gitea.ygg</a> / EmerDNS <a href="http://gitea.emc">gitea.emc</a>
-					</div>
-				</div>
+			<div class="project"><!-- git.3301.su-->
+				<div class="project_name"><a href="https://git.3301.su/" class="project_name" target="_blank">git.3301.su</a></div>
+				<div class="project_status complete"></div>
+				<div class="project_description">Удобный сервис собственного хостинга репозиториев Git</div>
+                <div class="project_links"><a href="https://git.3301.su/" target="_blank">Подробнее</a></div>
 			</div>
-		</div>
-		
-		<div id="cr" class="wow">
-			<div id="list_projects" class="zav">
-				<img src="page/internet.webp"/>
-				<div class="name">
-					<a href="#ALFIS_DNS" onClick="openwindow()">DNS server</a>
-					<div id="description"><a href="#ALFIS_DNS" onClick="openwindow()">View</a>
-					</div>
-					<div id="description-media_sreen">
-						<div id="description-media_sreen"><a href="#ALFIS_DNS" onClick="openwindow()">View</a>
-					</div>
-				</div>
+			
+			<div class="project"><!-- DNS -->
+				<div class="project_name"><a onClick="windowDns()" class="project_name">DNS сервер</a></div>
+				<div class="project_status complete"></div>
+				<div class="project_description">Yggdrasil address</div>
+                <div class="project_links"><a onClick="windowDns()">Подробнее</a></div>
 			</div>
-		</div>
-		
-		<div id="cr" class="wow">
-			<div id="list_projects" class="zav">
-				<img src="page/internet.webp"/>
-				<div class="name">
-					<a href="#">Useful</a>
-					<div id="description">
-						<a href="https://status.2buldzha2t.ru/">2buldzha2t status page</a></br>
-						<a href="https://pma.3301.su/">DB admin</a></br>
-						<a href="https://panel.3301.su/">Pterodactyl</a></br>
-					</div>
+			<!--Карта проектов-->
+				<div id="Projects_Map">
+					Карта проектов |
+					<div class="complete_status" name="complete"></div>Завершен
+					<div class="unfinished_status" name="unfinished"></div>В разработке
+					<div class="abandoned_status" name="abandoned"></div>Заброшен |
 				</div>
-			</div>
+			<!--Карта проектов end-->
 		</div>
-		
 	</div>
 	<!-- Список проектов end-->
-	
-	
-	<!-- открывающее меню подробностей-->
-	<div id="menu_par">
-		<div id="menu_details">
-			<a href="#prjct" id="close_window" onClick="closewindow()"><div id="ico_close"></div></a><!-- Закрыть-->
-			
-			
-			<div id="menu_content">
-				<div id="fott_menu">
-					<a name="yggdrasil node"></a><!--Якорь-->
-					<div id="menu_title">yggdrasil node</div>
-					<div id="details">Russia<br>
-						tcp://ygg-ru.cofob.ru:18000<br>
-						tls://ygg-ru.cofob.ru:18001<br>
-					</div>
-				</div>
-			</div>
-		
-		
-		<div id="fillthespace"></div><!-- <-Растянул простраство, чтоб инфа не толпилась-->
-		
-		<div id="menu_content">
-			<div id="fott_menu">
-				<a name="ALFIS_DNS"></a>
-				<div id="menu_title">Caching DNS Server:</div>
-				<div id="details">
-				Yggdrasil address: 325:5a4:d1c9:db96::53</br>
-				Supported: ICANN (Google, Quad9, AdGuard, Cloudflare), Alfis (Local), EmerDNS (Local)
-				</div>
-			</div>
-		</div>
-		
-		<div id="fillthespace"></div>
-		
+	<!-- окна -->
+	<!-- Майнкрафт окно -->
+	<div id="window_main-minecraft" class="window_main">
+		<div class="window windows">
+			<div class="windows_title">Маенкрафт сервер</div>
+			<div class="windows_description">Многопользовательский сервер Minecraft, c возможностью мониторинга статуса работы и своей вики. Cозданный 19 апреля в 2021 году. На данный момент является оффициальным сервером ютубера «БулдЖать».</div>
+			<div class="windows_links"><a href="https://2buldzha2t.ru" target="_blank">Сайт</a><a href="https://wiki.2buldzha2t.ru/doku.php?id=start" target="_blank">Вики</a><a href="https://status.2buldzha2t.ru/" target="_blank">Мониторинг</a><a href="https://discord.2buldzha2t.ru/" target="_blank">Дискорд</a></div>
 		</div>
 	</div>
-	
-	<!-- открывающее меню подробностей end-->
 
+<!-- yggdrasil окно -->		
+<div id="window_main-yggdrasil" class="window_main">
+	<div class="window windows">
+		<div class="windows_title">yggdrasil</div>
+		<div class="windows_description">Russia<br>tcp://ygg-ru.cofob.ru:18000<br>tls://ygg-ru.cofob.ru:18001</div>
+		<div class="windows_links"><a href="https://github.com/cofob/public-peers" target="_blank">GitHub</a></div>
+		</div>
+</div>
 	
+<!-- DNS окно -->
+<div id="window_main-dns" class="window_main">
+	<div class="window windows">
+		<div class="windows_title">Caching DNS Server</div>
+		<div class="windows_description">Yggdrasil address: 325:5a4:d1c9:db96::53<br>Supported: ICANN (Google, Quad9, AdGuard, Cloudflare), Alfis (Local), EmerDNS (Local)</div>
+		<div class="windows_links"></div>
+	</div>
+</div>
+<script src="window.js" type="text/javascript" defer></script>	
+
 	<!--Ссылки на соц. сети и т.д.-->
 	<div id="social">
-		<div id="social_ico"><a href="https://github.com/cofob" title="GitHub"><img src="page/GitHub_logo-cofob.webp"/></a></div>
-		<div id="social_ico"><a href="https://keys.openpgp.org/search?q=EF209B6277069F1DE4F19C793D64EDB87BD67478" title="GPG Key"><img src="page/pgp-logo.webp"/></a></div>
-		<div id="social_ico"><a href="https://steamcommunity.com/id/cofob/" title="Steam"><img src="page/steam_logo-cofob.webp" /></a></div></div>
+		<div class="social_ico"><a href="https://github.com/cofob" title="GitHub"><img src="page/img/GitHub_logo-cofob.webp" /></a></div>
+		<div class="social_ico"><a href="https://keys.openpgp.org/search?q=EF209B6277069F1DE4F19C793D64EDB87BD67478" title="GPG Key"><img src="page/img/pgp-logo.webp"/></a></div>
+		<div class="social_ico"><a href="https://steamcommunity.com/id/cofob/" title="Steam"><img src="page/img/steam_logo-cofob.webp" /></a></div>
 	</div>
 	<!--Ссылки на соц. сети и т.д. end-->
-	
 </body>
 </html>
