@@ -1,0 +1,11 @@
+algorythm: rsa
+
+key:
+p: 659
+q: 251
+d: 64303
+
+encrypted password:
+31552
+
+go to <a href="https://cofob.ru/secret">https://cofob.ru/secret</a> and decrypt with given password.
