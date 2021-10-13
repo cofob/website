@@ -1,11 +1,18 @@
-algorythm: rsa
-
-key:
-p: 659
-q: 251
-d: 64303
-
-encrypted password:
-31552
-
-go to <a href="https://cofob.ru/secret">https://cofob.ru/secret</a> and decrypt with given password.
+<!doctype html>
+<head>
+<meta charset="utf-8">
+<title>Secret Wish</title>
+</head>
+<body>
+algorythm: rsa</br>
+</br>
+key:</br>
+p: 659</br>
+q: 251</br>
+d: 64303</br>
+</br>
+encrypted password:</br>
+31552</br>
+</br>
+go to <a href="https://cofob.ru/secret">https://cofob.ru/secret</a> and decrypt with given password.</br>
+</body>
