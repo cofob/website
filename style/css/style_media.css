@@ -44,13 +44,35 @@
 		width: 240px;
 		margin:-156px 0 0 -120px;
 	}
+	.project::after {
+		margin: 10px 0 0 0;
+	}
+	.project_name{
+		margin: 0;
+		text-decoration: underline;
+		text-decoration-color:#BB92FF;
+		display: block;
+		text-align: center;
+	}
+	.project_description{
+		padding: 6px;
+	}
+	.project_status{ 
+		position: absolute;
+	}
+	.project_status.complete{
+		background-color: rgba(255,255,255,0.00);		
+	}
+	.project_links{
+		display:none;
+	}
 	.section{
 		text-align: left;
 		margin-bottom: 10px;
 		font-family: 'Ubuntu', sans-serif;
 		padding: 0;
 		color:#cbb6ed;
-		font-size: 22px;
+		font-size: 1.5em;
 	}
 	.section::before{
 		display: none;
@@ -58,18 +80,23 @@
 	.section::after{
 		display: none;
 	}
+	#Projects_Map{
+		display:none;
+	}
+	#social{
+		margin: -10px;
+	}
 @media (max-width: 297px), (handheld){
+	#title{
+		margin:-90px 0 0 -120px;
+	}
 	body{
 		min-width: 239px;
 		width: 100%;
 	}
 	.section{
-		text-align: left;
-		margin-bottom: 10px;
-		font-family: 'Ubuntu', sans-serif;
-		padding: 0;
-		color:#cbb6ed;
-		font-size: 22px;
+		margin-bottom: 0px;
+		font-size: 1.2em;
 	}
 	.section::before{
 		display: none;

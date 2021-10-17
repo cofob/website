@@ -6,7 +6,6 @@
 }
 @keyframes title-anim_emergence{
 	0%{
-		filter: blur(3px);
 		opacity: 0;
 		text-shadow: -0px 0px 0 #FF0004,0px 0px 0 #2200FF;
 		transform: scale(2.8,2.8);

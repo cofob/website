@@ -4,9 +4,15 @@
 	font-family:"Hattori Hanzo";
 	src: url("../other/font.otf");	
 }
+*{
+	transition: 300ms;
+}
 ::selection{
 	background-color: #67267F;
 	color:#fff;
+}
+#arrow,#fillthespace,#list_projects,#Projects_Map,.windows,.windows_links a,.windows_description,.place.section::before,.section::after,.project_name,.project_status,.project_links a::before,.social_ico{
+	display: inline-block;
 }
 html {
 	scroll-behavior: smooth;
@@ -29,22 +35,6 @@ body{
 #title, .projectScroll{
 	display:inline-block;
 	left:50%;
-}
-#title::before,#title::after{
-	opacity: 0;
-	font-style:italic bold;
-	animation:  opacit4 300ms 1;
-	margin-left: 10px;
-	position: absolute;
-	color: blue;
-	content: "cofob";
-}
-#title::after{
-	margin-left: -338px;
-	color: red;
-}
-#title::before{
-	color: blue;
 }
 #title{
 	text-shadow: -2px 0px 0 #FF0004,2px 0px 0 #2200FF,-2px 0px 10px rgba(255,20,20,0.4),2px 0px 10px rgba(20,20,255,0.4);
@@ -82,7 +72,6 @@ body{
 #arrow{
 	opacity: 0.7;
 	animation: arrow 2s 3 cubic-bezier(0, 1, 0.99,-0.07);
-	display: inline-block;
 	transform: translateY(-5px) rotate(135deg);
 	width: 30px;
 	height: 30px;
@@ -91,7 +80,7 @@ body{
 	margin: 10px 0px 0px 10px;
 }
 .place{
-	display: inline-block;
+	
 }
 .section{
 	text-align: center;
@@ -104,7 +93,7 @@ body{
 .section::before{
 	margin: 15px 0px 0px -352px;
 	position: absolute;
-	display: inline-block;
+	
 	content: "";
 	max-width: 352px;
 	width: 100%;
@@ -114,7 +103,6 @@ body{
 .section::after{
 	margin: 15px 0px 0px 0px;
 	position: absolute;
-	display: inline-block;
 	content: "";
 	max-width: 352px;
 	width: 100%;
@@ -124,17 +112,15 @@ body{
 #fillthespace{
 	height: 100vh;
 	width: 0;
-	display: inline-block;
+	
 }
 #list_of_projects-main{
 	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
 	display: block;
 	color:#B7B7B7;
 	text-align: center;
-	
 }
 #list_projects{
-	display: inline-block;
 	max-width: 850px;
 	min-width: 240px;
 	text-align:left;
@@ -152,7 +138,6 @@ body{
 }
 .project_name{
 	margin: 0px 0 10px 0px;
-	display: inline-block;
 	font-weight: 600;
 	font-size: 20px;
 }
@@ -163,9 +148,6 @@ body{
 }
 .project_name a:hover{
 	text-decoration: underline;
-}
-.project_status{
-	display: inline-block;
 }
 .project_status.complete{
 	width: 8px;
@@ -202,10 +184,7 @@ body{
 	color:#B7B7B7;
 }
 .project_links a::before{
-}
-.project_links a::before{
 	color:#fff;
-	display: inline-block;
 	text-decoration: none;
 	margin: 0 3px;
 	content: "/";
@@ -237,7 +216,6 @@ body{
 	padding: 0;
 	margin: 0 15px 0 15px;
 	opacity: .5;
-	display: inline-block;
 }
 .social_ico:hover{
 	opacity: 1;
@@ -253,7 +231,6 @@ body{
     margin-left: -0px;
     margin-bottom: 10px;
     border-radius: 8px;
-    display: inline-block;
     font-size: 0.98em;
     color: rgba(200,182,198,0.6);
 }
@@ -297,7 +274,6 @@ body{
 	width: 100%;
 	background-color: #170d16;
 	color:#fff;
-	display: inline-block;
 	position: fixed;
 	bottom: 0;
 }
@@ -319,7 +295,6 @@ body{
 	text-align: center;
 }
 .windows_links a{
-	display: inline-block;
 	border: solid 2px #170d16;
 	border-radius:8px;
 	box-shadow: 5px 5px 0 0 rgba(0,0,0,0.46);
@@ -333,7 +308,6 @@ body{
 	background-color: rgba(0,0,0,0.15);
 }
 .windows_description{
-	display: inline-block;
 	max-width: 850px;
 	min-width: 240px;
 	padding: 20px 0px;
