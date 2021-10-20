@@ -44,8 +44,14 @@
 		width: 240px;
 		margin:-156px 0 0 -120px;
 	}
+	.project{
+		background-color: rgb(0 0 0 / 8%);
+		border: dashed 1px rgba(255,255,255,0.1);
+		border-radius: 6px;
+		margin: 10px;
+	}
 	.project::after {
-		margin: 10px 0 0 0;
+		display: none;
 	}
 	.project_name{
 		margin: 0;
@@ -55,6 +61,7 @@
 		text-align: center;
 	}
 	.project_description{
+		
 		padding: 6px;
 	}
 	.project_status{ 
@@ -67,12 +74,12 @@
 		display:none;
 	}
 	.section{
-		text-align: left;
+		text-align:center;
 		margin-bottom: 10px;
 		font-family: 'Ubuntu', sans-serif;
 		padding: 0;
 		color:#cbb6ed;
-		font-size: 1.5em;
+		font-size: 1.3em;
 	}
 	.section::before{
 		display: none;
@@ -80,13 +87,26 @@
 	.section::after{
 		display: none;
 	}
+	.windows_links::before{
+		color:#7C699B;
+		font-size: 0.9em;
+		content:"ССЫЛКИ:";
+	}
+	.windows_links a{
+		display: block;
+		border: solid 2px #6a4f97;
+		box-shadow: none;
+		margin: 6px 10px;
+		width: auto;
+	}
 	#Projects_Map{
 		display:none;
 	}
 	#social{
-		margin: -10px;
+		margin: -10px 0;
 	}
-@media (max-width: 297px), (handheld){
+}
+@media (max-width: 320px), (handheld){
 	#title{
 		margin:-90px 0 0 -120px;
 	}
@@ -104,3 +124,13 @@
 	.section::after{
 		display: none;
 	}
+}
+@media (max-height: 620px), (handheld){
+	.windows_description{
+		max-height: 130px;
+	}
+	.windows_links{
+		overflow-y: auto;
+		max-height: 120px;
+	}
+}

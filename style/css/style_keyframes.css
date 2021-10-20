@@ -16,7 +16,6 @@
 		opacity: 0;
 	}
 	100%{
-		filter: blur(0px);
 		opacity:1;
 		text-shadow: -2px 0px 0 #FF0004,2px 0px 0 #2200FF;
 		transform: scale(1,1);

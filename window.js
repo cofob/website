@@ -1,8 +1,14 @@
 
+let EptaCloseWindows = document.getElementsByClassName("window_main");//
 let windowminecraft = document.getElementById("window_main-minecraft");// название переменых в нижнем регистре
 let windowyggdrasil = document.getElementById("window_main-yggdrasil");
 let windowdns = document.getElementById("window_main-dns");
 
+function CloseWindows() {//закрытие окон
+	for(let i=0; i<EptaCloseWindows.length; i++){
+		EptaCloseWindows[i].style.visibility = "hidden";
+	}
+}
 
 function widnowMinecraftserver() { // имя функции windows+название пректа с заглавной буквы без пробела на латинице
 	windowminecraft.classList.toggle("show");//вызов анимации появления
@@ -10,6 +16,7 @@ function widnowMinecraftserver() { // имя функции windows+назван
 }
 window.addEventListener("click", function(event) { //закрытие окна при нажатии на затемненую область
     if (event.target == windowminecraft) {
+		windowminecraft.classList.toggle("show");
         windowminecraft.style.visibility = "hidden";//изменение стиля видимого окна на невидимое
     }
 });
