@@ -42,7 +42,6 @@
 		left: 58px;
 		visibility: hidden;
 	}
-	
 </style>
 <body>
 	<noscript>
@@ -52,19 +51,19 @@
 		<div class="warning_box">Javascript отключен в вашем веб-браузере. Некоторые функции не доступны</div>
 		</div>
 	</noscript>
-	<div translate="no" class="notranslate" id="title">cofob</div>
-	<a translate="no" class="projectScroll notranslate" href="#projects" title="scroll down"><div id="arrow"></div></a>
+	<header translate="no" class="notranslate" id="title">cofob</header>
+	<a class="projectScroll" href="#projects" title="scroll down"><div id="arrow"></div></a>
 	<div id="fillthespace"></div>
 	<!-- Список проектов-->
 	<div class="section">Мои проекты:</div>
-	<div id="list_of_projects-main">
+	<article id="list_of_projects-main">
 		<div id="list_projects">
 			<a name="projects"></a>
 			<div class="project"><!--Minecraft server -->
 				<div class="project_name"><a onclick="widnowMinecraftserver()" class="project_name">Маенкрафт сервер</a></div>
 				<div class="project_status complete"></div><!--complete-завершен, unfinished-незавершен, abandoned-заброшен -->
 				<div class="project_description">Многопользовательский сервер Minecraft, c возможностью мониторинга статуса работы и своей вики. Cозданный 19 апреля в 2021 году. На данный момент является оффициальным сервером ютубера «БулдЖать».</div>
-                <div class="project_links"><a href="https://2buldzha2t.ru" target="_blank">Сайт</a><a href="https://wiki.2buldzha2t.ru/doku.php?id=start" target="_blank">Вики</a><a href="https://status.2buldzha2t.ru/" target="_blank">Мониторинг</a><a href="https://discord.2buldzha2t.ru/" target="_blank">Дискорд</a></div>
+                <div class="project_links"><a href="https://2buldzha2t.ru" target="_blank">Сайт</a><a href="https://wiki.2buldzha2t.ru/doku.php?id=start" target="_blank">Вики</a><a href="https://status.2buldzha2t.ru/" target="_blank">Мониторинг</a><a href="https://discord.2buldzha2t.ru/" target="_blank">Дискорд</a><a href="minecraft_treasure_0/index.html">Сокровище</a></div>
 				<!--в "project_links" ссылки для десктопа, в мобилках их нет.-->
 			</div>
 			<div class="project"><!--Yggdrasil nodes-->
@@ -95,7 +94,7 @@
 				</div>
 			<!--Карта проектов end-->
 		</div>
-	</div>
+	</article>
 	<!-- Список проектов end-->
 	<!-- окна -->
 	<!-- Майнкрафт окно -->
@@ -135,14 +134,14 @@
 		<div class="windows_links"></div>
 	</div>
 </div>
-<script src="window.js" type="text/javascript" defer></script>	
+<script src="window.js" type="text/javascript" async></script>	
 
 	<!--Ссылки на соц. сети и т.д.-->
-	<div id="social">
+	<footer id="social">
 		<div class="social_ico"><a href="https://github.com/cofob" title="GitHub"><img src="page/img/GitHub_logo-cofob.webp" /></a></div>
 		<div class="social_ico"><a href="https://keys.openpgp.org/search?q=C3E9E6212A94877DBAB62DEABE9317B91730D0DA" title="GPG Key"><img src="page/img/pgp-logo.webp"/></a></div>
 		<div class="social_ico"><a href="https://steamcommunity.com/id/cofob/" title="Steam"><img src="page/img/steam_logo-cofob.webp" /></a></div>
-	</div>
+	</footer>
 	<!--Ссылки на соц. сети и т.д. end-->
 </body>
 </html>

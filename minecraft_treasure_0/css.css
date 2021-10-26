@@ -1,0 +1,291 @@
+@charset "utf-8";
+
+@import "https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap";
+
+@keyframes showDiv {
+  0%, 99% {
+    height: 0px;
+  }
+  100% {
+    height: 301px;
+  }
+}
+body
+{
+	max-width:100%;
+	margin:0;
+	padding:0;
+	min-width:801px;
+	background:url(bg.webp) no-repeat center center fixed;
+	background-size:cover;
+	text-align:center;
+	font-family:'Press Start 2P',cursive
+}
+
+.article
+{
+	color:#00340e;
+	width:800px;
+	display:inline-block;
+	margin-top:72px
+}
+
+.article_content
+{
+	border-radius:8px 8px 8px 8px;
+	background-color:#fff;
+	text-align:center;
+	padding-bottom:4px;
+	box-shadow:inset 0 -4px 0 0 rgba(0,0,0,0.42)
+}
+
+.article_title
+{
+	box-shadow:0 -4px 0 0 #087E11;
+	border-radius:8px 8px 0 0;
+	color:#E5E5E5;
+	font-size:1.1em;
+	width:800px;
+	padding:10px 0;
+	background-color:#0CAC19
+}
+.article_title::before
+{
+	content:"";
+	width:22px;
+	margin:-2px 0 0 -24px;
+	display:inline-block;
+	height:24px;
+	position: absolute;
+	background-image:url("minecraft-logo.png");
+}
+
+.article_text
+{
+	padding:10px 10px 35px;
+	font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+	font-weight:600;
+	text-align:left;
+	width:800px;
+	display:inline-block;
+	flex-direction:column
+}
+
+.article_text img
+{
+	border-radius:4px
+}
+
+.directory
+{
+	display:inline-block;
+	color:#515151;
+	padding-left:18px;
+	height:auto;
+	background-position:0 4px;
+	font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+	font-weight:600;
+	font-size:16px;
+	background-image:url(fldr-css.png);
+	background-repeat:no-repeat
+}
+
+.directory::after
+{
+	content:"";
+	display:block;
+	margin-left:-28px;
+	margin-top:10px
+}
+
+.directory a
+{
+	cursor:pointer;
+	color:#515151;
+	text-decoration:none
+}
+
+.directory a:hover
+{
+	color:#EC7A7C;
+	text-decoration:underline
+}
+
+.article_h1,.article_h2
+{
+	width:780px
+}
+
+.article_h1
+{
+	margin:0;
+	font-size:1.2em
+}
+
+.article_h1::before
+{
+	content:"";
+	width:14px;
+	margin-right:2px;
+	display:inline-block;
+	height:14px;
+	background-image:url(conversation.png)
+}
+
+.article_h2
+{
+	margin:2px 0 10px 0;
+	font-size:1em
+}
+
+#img-window
+{
+	display:none
+}
+
+.help:hover .help_code
+{
+	display:inline-block
+}
+
+.help_code
+{
+	border-radius:4px;
+	color:#fff;
+	padding:0 4px;
+	position:absolute;
+	margin:-18px 0 0 -61px;
+	background-color:#1D680E;
+	display:none
+}
+
+.article_h1 a,.article_h2 a
+{
+	cursor:pointer;
+	text-decoration:underline;
+	color:#386806
+}
+
+.article a:hover
+{
+	color:#EC7A7C
+}
+
+.article_h1 a[target~="_blank"]::after,.article_h2 a[target~="_blank"]::after
+{
+	content:"";
+	opacity:.7;
+	margin:0 0 4px 2px;
+	text-decoration:none;
+	display:inline-block;
+	width:7px;
+	height:8px;
+	background-position:0 0;
+	background-image:url(../style/img/new-tab_ico-black.webp)
+}
+
+.article_h2 a[target~="_blank"]:hover::after,.article_h1 a[target~="_blank"]:hover::after
+{
+	opacity:1;
+	background-position:7px 0
+}
+
+.complexity
+{
+	font-size:1.2em;
+	color:#00340e;
+}
+
+.complexity::before
+{
+	content:"";
+	width:14px;
+	margin-right:2px;
+	display:inline-block;
+	height:14px;
+	background-image:url(complexity.png)
+}
+
+#img_own
+{
+	visibility:hidden;
+	font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+	font-weight:600;
+	font-size:.9em;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+	position:fixed;
+	background-color:rgba(0,0,0,0.9)
+}
+
+.img_own a
+{
+	color:#6A6A6A
+}
+
+.img_window
+{
+	box-shadow:8px 8px 0 0 rgba(0,0,0,0.36);
+	border-radius:6px;
+	margin-top:66px;
+	padding:10px;
+	background-color:#FFF;
+	width:780px;
+	height:auto;
+	display:inline-block
+}
+
+.img_article
+{
+	text-align:left
+}
+
+.img_article img{
+	border-radius: 4px;
+}
+
+#noscript
+{
+	margin:20px;
+	color:#AA1F23
+}
+
+.about
+{
+	letter-spacing:-1px;
+	margin:-1px 0 0;
+	color:#8B8B8B;
+	font-weight:400;
+	position:absolute
+}
+
+.author::after
+{
+	content:" / "
+}
+
+.author
+{
+	display:inline-block
+}
+
+.data
+{
+	display:inline-block
+}
+
+.close_article{
+	cursor: pointer;
+	color:#fff;
+	margin: -25px 0 0px 10px;
+	font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+	position: absolute;
+}
+#head_img{
+	width: 800px;
+	height: 200px;
+	display: inline-block;
+	background-image: url("head_img.webp");
+}
