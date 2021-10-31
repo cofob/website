@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="../favicon.ico" type="image/x-icon">
+<title>Маенкрафтерам привет!</title>
+<link href="css.css" rel="stylesheet" type="text/css">
+<script src="../jquery.js"></script>
+</head>
+<!--
+Подсказки:
+от 1к до ±5к по x,z.
+-->
+<body>
+	<noscript>
+		<div id="noscript">!Необходима поддержка JavaScript!</div>
+	</noscript>
+	
+	<img src="sticker.webp" alt="закрытое главное окно" id="close-wndw" width="300" height="301" onClick="document.location.reload();" style="display: none;animation: showDiv 1500ms forwards;cursor:pointer" />
+	<article id="article" class="article">
+		<div class="article_content">
+			<div class="article_title">Minecraft treasure 3<div class="close_article"><a onclick="CloseArticle()" title="Закрыть окно">X</a></div></div>
+			<div id="head_img"></div>
+			<div class="article_text">
+				<div class="directory">/<a href="https://cofob.ru" target="_blank">cofob</a>/<a onclick="reminder()">minecraft_treasure_3</a></div>
+				<div class="article_h1">Minecraft treasure</div>
+				<div class="article_h2">Драгоценное сокровище координаты которые спрятаны на различных страницах сайта cofob.ru. Вроде той на который вы сейчас находитесь.</div>
+				<div class="article_h1">Содержимое сокровища</div>
+				<div class="article_h2">Как минимум,+undefined' кол-во незерит. слитков, алмазов, золота, железных блоков. элитры, броня и многое другое.</div>
+				<div class="article_h1">Где искать</div>
+				<div class="article_h2">Всё необходимое для поиска находится на этой странице.<br>
+От 0 до 5к коорд.</div>
+				<div class="article_h1">Ещё</div>
+				<div class="article_h2">Прочие подсказки можно найти в коде страницы.<br>
+		
+				Также об ивенте можно почитать на страницах wiki сервера <a href="https://wiki.2buldzha2t.ru/doku.php?id=%D0%B8%D0%B2%D0%B5%D0%BD%D1%82%D1%8B:minecraft_treasure-1" target="_blank">тут</a> и <a href="https://wiki.2buldzha2t.ru/doku.php?id=%D0%B8%D0%B2%D0%B5%D0%BD%D1%82%D1%8B:minecraft_treasure-2" target="_blank">тут</a>
+				<br>
+Нашедшему, просьба, сообщить о находке в дискорд сервере.<br></div>
+				<div class="about">
+					<div class="author" title="follow my GitHub">cofob</div>
+					<div class="data" >32.10.21</div>
+				</div>
+			</div>
+		</div>
+	</article>
+	<script type="text/javascript" async>
+		let window1 = document.getElementById("img_own");
+		let windowMain = document.getElementById("article");
+		let stiker = document.getElementById("close-wndw");
+		
+		function windowOpen() {
+			window1.style.visibility = "visible";
+		}
+		function windowClose() {
+			window1.style.visibility = "hidden";
+		}
+		window.addEventListener("click", function(event) {
+			if (event.target == window1) {
+				window1.style.visibility = "hidden";
+			}
+		});
+		function reminder(){
+			alert('Уже тут');
+		}
+		function CloseArticle(){
+			windowMain.style.display = "none";
+			stiker.style.display = "inline-block";
+		}
+	</script>
+	<script type="text/javascript" async>
+		if(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)){
+			alert('Страница не оптимизирована под мобильные устройства');
+		}
+</script>
+</body>
+</html>
