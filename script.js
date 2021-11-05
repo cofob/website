@@ -42,3 +42,21 @@ window.addEventListener("click", function(event) {
         windowdns.style.visibility = "hidden";
     }
 });
+
+
+
+const titlePrlx = document.getElementById("title");
+
+document.addEventListener("mousemove", function (e) { MoveTitle(e); });
+
+function MoveTitle(e)
+{
+	let offsetX = (e.clientX / window.innerWidth * -40) + 20;
+	let offsetY = (e.clientY / window.innerWidth * -20) + 10;
+	let i = (e.clientY / window.innerHeight * 8) - 4;
+	let offsetSmnsX = (e.clientX / window.innerWidth * -10) + 5;
+	let offsetSX = (e.clientX / window.innerWidth * 10) - 5;
+	let offsetSmnsY = (e.clientY / window.innerHeight * -8) + 4;
+	let offsetSY = (e.clientY / window.innerHeight * 8) - 4;
+   titlePrlx.setAttribute("style", "transform: translateX(" + offsetX + "px)" + " translateY(" +  offsetY + "px) rotateY(" + offsetSmnsX + "deg) rotateX(" + i + "deg);" + "text-shadow: " + offsetSmnsX + "px " + offsetSmnsY + "px 0px #A72F31," + offsetSX + "px " + offsetSY + "px 0px #5A48D0;" );
+}
