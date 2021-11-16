@@ -53,16 +53,12 @@
 }
 @keyframes arrow{
 	0%{
-		transform: translateY(-5px) rotate(135deg);
+		transform: translateY(-10px) rotate(135deg);
 	}
 	50%{
 		transform: translateY(-0px)  rotate(135deg);
 	}
 	100%{
-		transform: translateY(-5px) rotate(135deg);
+		transform: translateY(-10px) rotate(135deg);
 	}
-}
-@keyframes winShow{
-	0%{opacity: 0;}
-	100%{opacity: 1;}
 }
