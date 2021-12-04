@@ -71,8 +71,10 @@ body{
 	margin: 7px 0px -0px -4px;
 }
 #arrow{
+	cursor: pointer;
+	transition: 1s;
 	opacity: 0.7;
-	animation: arrow 2s 3 cubic-bezier(0, 1, 0.99,-0.07);
+	animation: arrow 2s infinite ease-in-out;
 	transform: translateY(-5px) rotate(135deg);
 	width: 30px;
 	height: 30px;
@@ -81,31 +83,30 @@ body{
 	margin: 10px 0px 0px 10px;
 }
 .section{
+	position: absolute;
+	width: 200px;
+	left: 50%;
+	margin-left: -100px;
+	display: inline-block;
+	background-color: #170d16;
 	text-align: center;
-	margin-bottom: 10px;
+	margin-top: -2px;
 	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
 	font-weight: 400;
 	padding: 0;
 	color:#cbb6ed;
 	font-size: 1.3em;
 }
-.section::before{
-	margin: 18px 0px 0px -352px;
-	position: absolute;
-	content: "";
-	max-width: 352px;
-	width: 100%;
-	height: 1px;
-	border-top: dashed 1px rgba(203,182,237,0.59);
+#section_par{
+	text-align: center;
+	margin-bottom: 10px;
 }
-.section::after{
-	margin: 18px 0px 0px 0px;
-	position: absolute;
-	content: "";
-	max-width: 352px;
-	width: 100%;
-	height: 1px;
-	border-top: dashed 1px rgba(203,182,237,0.59);
+.section-line{
+	display: inline-block;
+    height: 1px;
+    border-top: dashed 1px rgba(203,182,237,0.59);
+	width: 850px;
+	text-align: center;
 }
 #fillthespace{
 	height: 100vh;
@@ -122,6 +123,7 @@ body{
 	min-width: 240px;
 	text-align:left;
 }
+
 .project{
 	margin: 10px 0;
 }
@@ -234,17 +236,34 @@ a[target~="_blank"]::after{
 	display:block;
 	width: 100%;
 }
+#projects_map-parent{
+}
 #projects_map{
-	width: auto;
-    margin-left: -0px;
-    margin-bottom: 5px;
-    border-radius: 8px;
+	box-shadow: 1px 0 0 0 #3A46CC,-1px 0 0 0 #BC1C1E;
+	width: 400px;
+	padding: 5px 10px 8px 10px;
+	background-color: #281627;
+	display: inline-block;
+    margin-left: -435px;
+	margin-top: 10px;
+    margin-bottom: 0px;
+    border-radius: 4px;
     font-size: 0.98em;
-    color: rgba(200,182,198,0.6);
+    color: rgba(200,182,198,0.78);
+}
+#projects_map::after{
+	margin: 29px 0 0px -228px;
+	position: absolute;
+	content: "";
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 15px solid #281627;
 }
 .complete_status, .unfinished_status, .abandoned_status{
 	border-radius: 100%;
-	margin: 15px 2px 0 0px;
+	margin: 10px 2px 0 0px;
 	display:inline-block;
 	width: 8px;
 	height: 8px;
@@ -357,6 +376,9 @@ a[target~="_blank"]::after{
 }
 .windows_close::before{
 	transform: rotate(-45deg);
+}
+.map_anim{
+	animation: map_anim 600ms 1;
 }
 .show{
 	animation: winShow 300ms 1;

@@ -41,3 +41,36 @@ function PrlxTitle(){
 	let prlx = (window.pageYOffset / 3);
 	ParentTitlePrlx.setAttribute("style", "transform: translateY(" + prlx + "px);");
 }
+
+//стрелка вниз
+let arrow = document.getElementById("arrow");
+let scrollpage = (window.pageYOffset) ;
+window.addEventListener("click", function(e){
+	if(event.target == arrow){
+			window.scrollBy(0, 200);
+	}					
+});
+window.addEventListener("scroll", arrowAnim);
+function arrowAnim() {
+	if(window.scrollY  >= 150){
+		arrow.style.animation = "none";
+		arrow.style.transform = "rotate(315deg)"
+			window.addEventListener("click", function(e){
+				if(event.target == arrow){
+					window.scrollTo(pageXOffset, 0);
+				}					
+			});
+	}
+	else{
+		arrow.style.animation = "arrow 2s infinite ease-in-out";
+	}
+}
+
+
+
+
+
+
+
+
+

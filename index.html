@@ -8,12 +8,14 @@
 <link href="style/css/style.css" rel="stylesheet" type="text/css">
 <link href="style/css/style_media.css" rel="stylesheet" type="text/css">
 <link href="style/css/style_keyframes.css" rel="stylesheet" type="text/css">
-<link rel="preload" href="style/img/preload.jpg" as="image">
 <meta name="description" content="">
-<meta name="keywords" content="cofob,2buldzha2t,gitea.ygg,bofoc,2buldzha2t.ru,ванильный сервер майнкрафт,сервер майнкрафт,майнкрафт,minecraft,маенкрафтик">
+<meta name="keywords" content="cofob,2buldzha2t,gitea.ygg,bofoc,2buldzha2t.ru,ванильный сервер майнкрафт,сервер майнкрафт,майнкрафт,minecraft,ygg">
+<script src="wow.js" type="text/javascript"></script>
+<script>
+    new WOW().init();
+</script>
 </head>
 <body>
-	<!-- -->
 	<noscript>
 		<div id="warning_noscript">
 			<input id="warning_toggle" type="checkbox" name="a1"/>
@@ -24,27 +26,31 @@
 	<div id="par_h">
 		<header translate="no" class="notranslate" id="title" title="cofob">cofob</header>
 	</div>
-	<a class="projectScroll" href="#projects" title="scroll down"><div id="arrow"></div></a>
+	<a class="projectScroll" title="туда"><div id="arrow"></div></a>
 	<div id="fillthespace"></div>
 	<div id="section_par">
 		<div id="section_parent">
+			<div class="section-line"></div>
 			<div class="section">Мои проекты:</div>
+			
 		</div>
 	</div>
 	<article id="list_of_projects-main">
 	<!--Карта проектов begin-->
-		<div id="projects_map">
-			<span>Карта проектов:</span>
-				<div class="complete_status" name="complete"></div>Завершен
-				<div class="unfinished_status" name="unfinished"></div>В разработке
-				<div class="abandoned_status" name="abandoned"></div>Заброшен
+		<div id="projects_map-parent" class="wow map_anim">
+			<div id="projects_map">
+				<span>Карта проектов:</span>
+					<div class="complete_status" name="complete"></div>Завершен
+					<div class="unfinished_status" name="unfinished"></div>В разработке
+					<div class="abandoned_status" name="abandoned"></div>Заброшен
+			</div>
 		</div>
 		<!--Карта проектов end-->
 		<!-- Список проектов begin-->
 		<div id="list_projects">
 			<a name="projects"></a>
-			<div class="project"><!--Minecraft server -->
-				<div class="project_name"><a class="project_button window-1">Майнкрафт сервер</a></div>
+			<div class="project wow slide_right"><!--Minecraft server -->
+				<div class="project_name"><a class="project_button window-1 ">Майнкрафт сервер</a></div>
 				<!-- Если название проекта без отдельного окна, например это ссылка, то class="project_button" не требуется. Иначе сломается порядок всплывающих окон-->
 				<div class="project_status complete"></div>
 				<!--после класса "project_status" следует укозать статус проекта complete-завершен, unfinished-незавершен, abandoned-заброшен -->
@@ -53,19 +59,19 @@
                 <div class="project_links"><a href="https://2buldzha2t.ru" target="_blank">Сайт</a><a href="https://wiki.2buldzha2t.ru/doku.php?id=start" target="_blank">Вики</a><a href="https://status.2buldzha2t.ru/" target="_blank">Мониторинг</a><a href="https://discord.2buldzha2t.ru/" target="_blank">Дискорд</a></div>
 				<!--в "project_links" ссылки для десктопа, в мобилках их нет.-->
 			</div>
-			<div class="project"><!--Yggdrasil nodes-->
-				<div class="project_name"><a class="project_button window-2">Yggdrasil nodes</a></div>
+			<div class="project wow slide_left"><!--Yggdrasil nodes-->
+				<div class="project_name"><a class="project_button window-2 wow buggy-lamp">Yggdrasil nodes</a></div>
 				<div class="project_status complete"></div>
 				<div class="project_description">Сетевой протокол и его реализация, с помощью которого можно создать mesh-сеть, которая будет работать в оверлейном режиме, позволяя создать приватную сеть поверх Интернета.</div>
                 <div class="project_links"><a href="https://github.com/cofob/public-peers" target="_blank">GitHub</a></div>
 			</div>
-			<div class="project"><!-- git.3301.su-->
+			<div class="project wow slide_right"><!-- git.3301.su-->
 				<div class="project_name"><a class="project_button window-3">gitea.ygg</a></div>
 				<div class="project_status complete"></div>
 				<div class="project_description">Первый публичный сервис собственного хостинга репозиториев Git в сети Yggdrasil</div>
                 <div class="project_links"><a href="http://gitea.ygg" target="_blank">gitea.ygg</a> - yggdrasil<a href="https://git.cofob.ru" target="_blank">git.cofob.ru</a> - clearnet</div>
 			</div>
-			<div class="project"><!-- DNS -->
+			<div class="project wow slide_left"><!-- DNS -->
 				<div class="project_name"><a class="project_button window-4">DNS сервер</a></div>
 				<div class="project_status complete"></div>
 				<div class="project_description">Yggdrasil address</div>
@@ -76,7 +82,7 @@
 	<!-- Список проектов end-->
 	<!-- окна -->
 	<!-- Майнкрафт окно -->
-	<div id="window_main-minecraft" class="window_main window-1">
+	<div class="window_main window-1">
 		<div class="window windows">
 			<div class="windows_title">Маенкрафт сервер
 				<div class="p_windows_close" onClick="CloseWindows()" title="Закрыть">
@@ -90,7 +96,7 @@
 	</div>
 
 <!-- yggdrasil окно -->		
-<div id="window_main-yggdrasil" class="window_main window-2">
+<div class="window_main window-2">
 	<div class="window windows">
 		<div class="windows_title">yggdrasil
 			<div class="p_windows_close" onClick="CloseWindows()" title="Закрыть">
@@ -102,7 +108,7 @@
 </div>
 	
 <!-- gitea.ygg окно -->
-<div id="window_main-giteaygg" class="window_main window-3">
+<div class="window_main window-3">
 	<div class="window windows">
 		<div class="windows_title">gitea.ygg
 			<div class="p_windows_close" onClick="CloseWindows()" title="Закрыть">
@@ -114,7 +120,7 @@
 </div>
 	
 <!-- DNS окно -->
-<div id="window_main-dns" class="window_main window-4">
+<div class="window_main window-4">
 	<div class="window windows">
 		<div class="windows_title">Caching DNS Server
 			<div class="p_windows_close" onClick="CloseWindows()" title="Закрыть">
@@ -124,18 +130,16 @@
 		<div class="windows_links"></div>
 	</div>
 </div>
+
 <script src="script.js" type="text/javascript" async></script>	
 
 	<!--Ссылки на соц. сети и т.д.-->
 	<footer id="social">
-		<div class="social_ico"><a href="https://github.com/cofob" title="GitHub"><img src="page/img/GitHub_logo-cofob.webp" /></a></div>
-		<div class="social_ico"><a href="https://keys.openpgp.org/search?q=C3E9E6212A94877DBAB62DEABE9317B91730D0DA" title="GPG Key"><img src="page/img/pgp-logo.webp"/></a></div>
-		<div class="social_ico"><a href="https://steamcommunity.com/id/cofob/" title="Steam"><img src="page/img/steam_logo-cofob.webp" /></a></div>
-        <div class="social_ico"><a rel="me" href="https://zhub.link/@cofob"></a></div>
+		<div class="social_ico"><a href="https://github.com/cofob" title="GitHub"><img src="page/img/GitHub_logo-cofob.webp" width="32" height="32" /></a></div>
+		<div class="social_ico"><a href="https://keys.openpgp.org/search?q=C3E9E6212A94877DBAB62DEABE9317B91730D0DA" title="GPG Key"><img src="page/img/pgp-logo.webp" width="32" height="32"/></a></div>
+		<div class="social_ico"><a href="https://steamcommunity.com/id/cofob/" title="Steam"><img src="page/img/steam_logo-cofob.webp" width="32" height="32"/></a></div>
+        <div class="social_ico"><a rel="me" href="https://zhub.link/@cofob" title="zhub.link/@cofob"><img src="page/img/zhub_logo-cofob.webp" width="32" height="32"/></a></div>
 	</footer>
 	<!--Ссылки на соц. сети и т.д. end-->
-<script>	
-
-</script>
 </body>
 </html>

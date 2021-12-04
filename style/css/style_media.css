@@ -13,8 +13,19 @@
 		font-size: 7em;
 		width: 240px;
 	}
+	#section_par{
+		margin-bottom: 20px;
+	}
+	#list_projects{
+		padding: 5px;
+		box-sizing:border-box;
+	}
+	
+	.section-line{
+		display: none;
+	}
 	.section{
-		text-align: left;
+		text-align: center;
 		margin-bottom: 10px;
 		font-family: 'Ubuntu', sans-serif;
 		padding: 0;
@@ -33,6 +44,21 @@
 	.social_ico{
 		margin: 0 5px 0 5px;
 	}
+	#projects_map{
+		width: auto;
+		padding: 0;
+		background-color: rgba(0,0,0,0.00);
+		display: inline-block;
+    	margin-left: 0;
+		margin-top: 20px;
+    	margin-bottom: 0px;
+    	border-radius: none;
+    	font-size: 0.98em;
+    	color: rgba(200,182,198,0.78);
+	}
+	#projects_map::after{
+		content: none;
+	}
 }
 @media (max-width: 480px), (handheld){
 	body{
@@ -44,28 +70,42 @@
 		margin:-156px 0 0 -120px;
 	}
 	#title{
+		text-shadow: -2px 0 0 #D02F2F,2px 0 0 #2C4FD5;
 		animation: title-anim_emergence 0ms 1;
 		font-size: 7em;
 		width: 240px;
 	}
+	.buggy-lamp{
+		animation: buggy-lamp 5s 1;
+	}
 	.project{
+		box-shadow: 2px 0 0 0 #6075c8, -2px 0 0 0 #cf4141, 4px 0 2px 0 rgb(0 39 196 / 60%), -4px 0 2px 0 rgb(255 0 0 / 40%), 10px 8px 0 0 #110a10;
 		background-color: rgb(0 0 0 / 8%);
-		border: dashed 1px rgba(255,255,255,0.1);
+		border-top: dashed 1px #6075C8;
+		border-bottom: dashed 1px #C46565;
 		border-radius: 6px;
-		margin: 10px;
+		margin: 20px;
+	}
+	.project_button{
+		text-decoration: none;
+	}
+	.project_name a{
+		text-decoration: none;
+		text-shadow: 0 0 20px rgba(216,206,138,0.36);
+		color:rgba(249,224,214,1.00);
 	}
 	.project::after {
 		display: none;
 	}
 	.project_name{
+		font-weight: 400;
 		margin: 0;
-		text-decoration: underline;
 		text-decoration-color:#BB92FF;
 		display: block;
 		text-align: center;
 	}
 	.project_description{
-		
+		color:rgba(208,189,182,1.00);
 		padding: 6px;
 	}
 	.project_status{ 
@@ -77,9 +117,15 @@
 	.project_links{
 		display:none;
 	}
+	#section_par{
+		margin-bottom: 20px;
+	}
+	.section-line{
+		display: none;
+	}
 	.section{
+		margin-bottom: 20px;
 		text-align:center;
-		margin-bottom: 10px;
 		font-family: 'Ubuntu', sans-serif;
 		padding: 0;
 		color:#cbb6ed;
@@ -103,11 +149,17 @@
 		margin: 6px 10px;
 		width: auto;
 	}
-	#Projects_Map{
+	#projects_map{
 		display:none;
 	}
 	#social{
 		margin: -10px 0;
+	}
+	.slide_right{
+		animation: slide_right 500ms 1;
+	}
+	.slide_left{
+		animation: slide_left 500ms 1;
 	}
 }
 @media (max-width: 320px), (handheld){
