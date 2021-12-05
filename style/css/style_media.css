@@ -75,9 +75,6 @@
 		font-size: 7em;
 		width: 240px;
 	}
-	.buggy-lamp{
-		animation: buggy-lamp 5s 1;
-	}
 	.project{
 		box-shadow: 2px 0 0 0 #6075c8, -2px 0 0 0 #cf4141, 4px 0 2px 0 rgb(0 39 196 / 60%), -4px 0 2px 0 rgb(255 0 0 / 40%), 10px 8px 0 0 #110a10;
 		background-color: rgb(0 0 0 / 8%);
@@ -91,7 +88,7 @@
 	}
 	.project_name a{
 		text-decoration: none;
-		text-shadow: 0 0 20px rgba(216,206,138,0.36);
+		text-shadow: 0 0 20px rgba(216,206,138,0.48);
 		color:rgba(249,224,214,1.00);
 	}
 	.project::after {
@@ -99,7 +96,7 @@
 	}
 	.project_name{
 		font-weight: 400;
-		margin: 0;
+		margin: 10px 0 2px;
 		text-decoration-color:#BB92FF;
 		display: block;
 		text-align: center;
