@@ -2,7 +2,7 @@
 let AllWindows = document.getElementsByClassName("window_main");
 let AllButtonsOpenWindow = document.getElementsByClassName("project_button");
 
-function CloseWindows() {//закрытие окон
+function CloseWindows() {
 	for(let i=0; i<AllWindows.length; i++){
 		AllWindows[i].style.visibility = "hidden";
 	}
@@ -22,7 +22,7 @@ window.addEventListener("click", function(event){
 	}
 });
 
-// паралакс эффект надписи
+// паралакс эффект надписи "cofob"
 let titlePrlx = document.getElementById("title");
 let ParentTitlePrlx = document.getElementById("par_h");
 document.addEventListener("mousemove", function (e) { MoveTitle(e); });
@@ -63,6 +63,22 @@ function arrowAnim() {
 	}
 	else{
 		arrow.style.animation = "arrow 2s infinite ease-in-out";
+	}
+}
+
+//каждый втрой проект буит появлятся справа остальные слева для мобилак
+let projectblock = document.getElementsByClassName("project");
+window.addEventListener("scroll", startanimproject);
+function startanimproject(){
+	if(document.documentElement.clientWidth <= 480){
+		for(let i=0; i<AllWindows.length; i++){
+			if (i % 2 == 0){
+				projectblock[i].setAttribute("style", "animation: slide_right 500ms 1;");
+			}
+			else {
+				projectblock[i].setAttribute("style", "animation: slide_left 500ms 1;");
+			}
+		}
 	}
 }
 
