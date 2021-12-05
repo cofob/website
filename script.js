@@ -68,8 +68,7 @@ function arrowAnim() {
 
 //каждый втрой проект буит появлятся справа остальные слева для мобилак
 let projectblock = document.getElementsByClassName("project");
-window.addEventListener("scroll", startanimproject);
-function startanimproject(){
+window.onload = function startanimproject(){
 	if(document.documentElement.clientWidth <= 480){
 		for(let i=0; i<AllWindows.length; i++){
 			if (i % 2 == 0){
