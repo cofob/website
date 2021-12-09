@@ -1,7 +1,6 @@
 //окна
 let AllWindows = document.getElementsByClassName("window_main");
 let AllButtonsOpenWindow = document.getElementsByClassName("project_button");
-
 function CloseWindows() {
 	for(let i=0; i<AllWindows.length; i++){
 		AllWindows[i].style.visibility = "hidden";
@@ -31,9 +30,9 @@ function MoveTitle(e) {
 	let offsetX = (e.clientX / window.innerWidth * -60) + 30 ;
 	let offsetY = (e.clientY / window.innerWidth * -30) + 15;
 	let i = (e.clientY / window.innerHeight * 8) - 4;
-	let offsetSmnsX = (e.clientX / window.innerWidth * -10) + 5;
-	let offsetSX = (e.clientX / window.innerWidth * 10) - 5;
-	let offsetSmnsY = (e.clientY / window.innerHeight * - 10) + 5;
+	let offsetSmnsX = (e.clientX / window.innerWidth * -8) + 4;
+	let offsetSX = (e.clientX / window.innerWidth * 8) - 4;
+	let offsetSmnsY = (e.clientY / window.innerHeight * - 8) + 4;
 	let offsetSY = (e.clientY / window.innerHeight * 8) - 4;
    titlePrlx.setAttribute("style", "transform: translateX(" + offsetX + "px)" + " translateY(" +  offsetY + "px) rotateY(" + offsetSmnsX + "deg) rotateX(" + i + "deg);" + "text-shadow: " + offsetSmnsX + "px " + offsetSmnsY + "px 0px #A72F31," + offsetSX + "px " + offsetSY + "px 0px #5A48D0;" );
 }
@@ -68,24 +67,12 @@ function arrowAnim() {
 
 //каждый втрой проект буит появлятся справа остальные слева для мобилак
 let projectblock = document.getElementsByClassName("project");
-window.onload = function startanimproject(){
-	if(document.documentElement.clientWidth <= 480){
-		for(let i=0; i<AllWindows.length; i++){
-			if (i % 2 == 0){
-				projectblock[i].setAttribute("style", "animation: slide_right 500ms 1;");
-			}
-			else {
-				projectblock[i].setAttribute("style", "animation: slide_left 500ms 1;");
-			}
-		}
+window.onload =  function widthcheck() {
+	if(window.screen.width >= 480) startanimproject();
+}
+function startanimproject(){
+	for(let i=0; i<projectblock.length; i++){
+		if (i % 2 == 0) projectblock[i].classList.add("slide_right");
+		else projectblock[i].classList.add("slide_left");
 	}
 }
-
-
-
-
-
-
-
-
-

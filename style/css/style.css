@@ -1,11 +1,20 @@
 @charset "utf-8";
+:root{
+	--main-bg-color:#170d16;
+	--second-bg-color:#281627;
+	--third-bg-color:#3D213C;
+	--white-text-color:#E1E1E1;
+	--main-text-color:#B7B7B7;
+	--second-text-color:#BB92FF;
+	--third-text-color:#CBB6ED;
+	--main-font:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+}
 @font-face{
 	font-family:"Hattori Hanzo";
 	src: url("../other/font.otf");	
 }
 ::selection{
 	background-color: #67267F;
-	color:#fff;
 }
 #arrow,#fillthespace,#list_projects,.windows,.windows_links a,.windows_description,.place.section::before,.section::after,.project_name,.project_status,.project_links a::before,.social_ico,.p_windows_close,.windows_close::after,.windows_close::before{
 	display: inline-block;
@@ -21,12 +30,11 @@ body, #title{
 	padding:0;
 }
 body{
-	animation: bg-anim 300ms 1;
 	margin: 0;
 	min-width: 800px;
 	max-width: 100%;
-	background-color: #170d16;
-	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+	background-color: var(--main-bg-color);
+	font-family: var(--main-font);
 }
 #title, .projectScroll{
 	display:inline-block;
@@ -37,17 +45,18 @@ body{
 	top:50%;
 	perspective: 400px;
 	transform-style: preserve-3d;
-	margin:-156px 0 0 -169px;
+	margin:-147px 0 0 -169px;
 	left: 50%;
 }
 #title{
-	text-shadow: -0px 0 0 #A72F31, 0px 0 0  #5A48D0;
+	transition: 50ms;
+	text-shadow: 0px 0 0 #A72F31, 0px 0 0  #5A48D0;
 	font-family:"Hattori Hanzo";
-	color:#FFFFFF;
+	color:var(--white-text-color);
 	animation: title-anim_emergence 350ms 1;
 	font-style:italic;
-	font-size:10em;
-	width:338px;
+	font-size:9em;
+	width:294px;
 	height:auto;
 	
 }
@@ -88,13 +97,13 @@ body{
 	left: 50%;
 	margin-left: -100px;
 	display: inline-block;
-	background-color: #170d16;
+	background-color: var(--main-bg-color);
 	text-align: center;
 	margin-top: -2px;
-	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+	font-family: var(--main-font);
 	font-weight: 400;
 	padding: 0;
-	color:#cbb6ed;
+	color:var(--third-text-color);
 	font-size: 1.3em;
 }
 #section_par{
@@ -113,9 +122,9 @@ body{
 	width: 0;
 }
 #list_of_projects-main{
-	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+	font-family: var(--main-font);
 	display: block;
-	color:#B7B7B7;
+	color:var(--main-text-color);
 	text-align: center;
 }
 #list_projects{
@@ -125,7 +134,7 @@ body{
 }
 
 .project{
-	margin: 10px 0;
+    margin: 10px 0;
 }
 .project::after{
 	margin: 30px 0 0 0;
@@ -133,7 +142,7 @@ body{
 	display: block;
 	width: 100%;
 	height: 1px;
-	background-color: #3B203A;
+	background-color: var(--third-bg-color);
 }
 .project_name{
 	margin: 0px 0 10px 0px;
@@ -143,7 +152,7 @@ body{
 .project_name a{
 	cursor: pointer;
 	text-decoration: none;
-	color:#BB92FF;
+	color:var(--second-text-color);
 }
 .project_name a:hover{
 	text-decoration: underline;
@@ -171,7 +180,7 @@ body{
 	font-size: 16px;
 }
 .project_description a{
-	color:#B7B7B7;
+	color:var(--main-text-color);
 }
 .project_links{
 	margin-left: -0px;
@@ -181,7 +190,7 @@ body{
 	font-size: 16px;
 	text-decoration: underline;
 	cursor: pointer;
-	color:#B7B7B7;
+	color:var(--main-text-color);
 }
 .project_links a:hover{
 	color:#B78283;
@@ -213,14 +222,13 @@ a[target~="_blank"]::after{
 	content: none;
 }
 #social{
-	box-shadow: inset 0 0 10px 10px rgba(0,0,0,0.2);
 	background-attachment: fixed;
 	background-image: url("../img/bofoc.webp");
 	background-size: cover;
 	text-align: center;
 	margin: 40px 0 0 0;
 	padding:10px 0 10px 0; 
-	background-color: #0C060B;
+	background-color: var(--second-bg-color);
 }
 .social_ico{
 	padding: 0;
@@ -240,26 +248,17 @@ a[target~="_blank"]::after{
 }
 #projects_map{
 	box-shadow: 1px 0 0 0 #3A46CC,-1px 0 0 0 #BC1C1E;
-	width: 400px;
+	width: auto;
+	height: 35px;
+	box-sizing:border-box;
 	padding: 5px 10px 8px 10px;
-	background-color: #281627;
+	background-color: var(--second-bg-color);
 	display: inline-block;
-    margin-left: -435px;
 	margin-top: 10px;
     margin-bottom: 0px;
     border-radius: 4px;
     font-size: 0.98em;
-    color: rgba(200,182,198,0.78);
-}
-#projects_map::after{
-	margin: 29px 0 0px -228px;
-	position: absolute;
-	content: "";
-	width: 0;
-	height: 0;
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	border-top: 15px solid #281627;
+    color: var(--main-text-color);
 }
 .complete_status, .unfinished_status, .abandoned_status{
 	border-radius: 100%;
@@ -299,8 +298,8 @@ a[target~="_blank"]::after{
 	box-shadow: 0 -10px 20px 0 rgba(0,0,0,0.6);
 	text-align: center;
 	width: 100%;
-	background-color: #170d16;
-	color:#fff;
+	background-color: var(--second-bg-color);
+	color:var(--main-text-color);
 	position: fixed;
 	bottom: 0;
 }
@@ -308,8 +307,8 @@ a[target~="_blank"]::after{
 	padding: 15px 0;
 	font-weight: 600;
 	font-size: 22px;
-	background-color: #0F090F;
-	color:#BB92FF;
+	background-color: var(--main-bg-color);
+	color:var(--second-text-color);
 	text-align: center;
 }
 .windows_links{
@@ -318,7 +317,7 @@ a[target~="_blank"]::after{
 	padding: 10px 0 20px 0;
 	font-weight: 600;
 	font-size: 18px;
-	color:#BB92FF;
+	color:var(--second-text-color);
 	text-align: center;
 }
 .windows_links a{
@@ -411,3 +410,24 @@ a[target~="_blank"]::after{
 	left: 58px;
 	visibility: hidden;
 }
+#close_projects_map{
+	box-shadow: 1px 0 0 0 #3a46cc, -1px 0 0 0 #bc1c1e;
+	background-color: var(--main-bg-color);
+	border: solid 1px var(--second-bg-color);
+	border-radius: 50%;
+	width: 14px;
+	height: 15px;
+	cursor: pointer;
+	position: absolute;
+	margin: -35px 0 0 401px;
+	font-weight: 500;
+	font-size: 15px;
+}
+#close_projects_map-ico{
+	margin: -3px 0;
+}
+
+
+
+
+

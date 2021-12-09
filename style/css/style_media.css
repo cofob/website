@@ -45,16 +45,7 @@
 		margin: 0 5px 0 5px;
 	}
 	#projects_map{
-		width: auto;
-		padding: 0;
-		background-color: rgba(0,0,0,0.00);
-		display: inline-block;
-    	margin-left: 0;
-		margin-top: 20px;
-    	margin-bottom: 0px;
-    	border-radius: none;
-    	font-size: 0.98em;
-    	color: rgba(200,182,198,0.78);
+
 	}
 	#projects_map::after{
 		content: none;
@@ -88,7 +79,7 @@
 	}
 	.project_name a{
 		text-decoration: none;
-		text-shadow: 0 0 20px rgba(216,206,138,0.48);
+		text-shadow: 0 0 4px #000,0 0 20px rgba(216,206,138,0.48);
 		color:rgba(249,224,214,1.00);
 	}
 	.project::after {
@@ -137,7 +128,7 @@
 	.windows_links::before{
 		color:#7C699B;
 		font-size: 0.9em;
-		content:"ССЫЛКИ:";
+		content:attr(data-text);;
 	}
 	.windows_links a{
 		display: block;
